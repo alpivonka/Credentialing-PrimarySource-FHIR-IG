@@ -1,0 +1,266 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "id": "genomics-example-bundle",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:pat-1",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "pat-1",
+        "identifier": [
+          { "system": "http://hospital.example.org/mrn", "value": "MRN-12345" }
+        ],
+        "name": [{ "family": "Rivera", "given": ["Alex"] }],
+        "gender": "female",
+        "birthDate": "1982-07-28"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:spec-1",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "spec-1",
+        "type": {
+          "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/v2-0487", "code": "WB", "display": "Whole blood" }]
+        },
+        "subject": { "reference": "urn:uuid:pat-1" },
+        "collection": { "collectedDateTime": "2025-08-30T09:15:00Z" }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:study-1",
+      "resource": {
+        "resourceType": "GenomicStudy",
+        "id": "study-1",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study"
+          ]
+        },
+        "status": "available",
+        "subject": { "reference": "urn:uuid:pat-1" },
+        "encounter": { "display": "Outpatient visit" },
+        "started": "2025-08-30T09:30:00Z",
+        "basedOn": [{ "display": "Oncology NGS panel (300 genes)" }],
+        "identifier": [{ "system": "http://lab.example.org/studies", "value": "GS-2025-00042" }],
+        "note": [{ "text": "WES (tumor-only), hg38; pipeline v5.4" }]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:gdf-1",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "gdf-1",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-data-file"
+          ]
+        },
+        "status": "current",
+        "type": {
+          "coding": [{ "system": "http://loinc.org", "code": "81247-9", "display": "Genetic analysis master panel" }]
+        },
+        "subject": { "reference": "urn:uuid:pat-1" },
+        "date": "2025-08-31T14:02:00Z",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/gzip",
+              "url": "https://files.example.org/ngs/GS-2025-00042/sample.vcf.gz",
+              "title": "Variant calls (VCF)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:var-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "var-1",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              { "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "laboratory" }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            { "system": "http://loinc.org", "code": "69548-6", "display": "Genetic variant assessment" }
+          ]
+        },
+        "subject": { "reference": "urn:uuid:pat-1" },
+        "effectiveDateTime": "2025-08-31T12:25:00Z",
+        "specimen": { "reference": "urn:uuid:spec-1" },
+        "derivedFrom": [{ "reference": "urn:uuid:study-1" }, { "reference": "urn:uuid:gdf-1" }],
+        "component": [
+          {
+            "code": {
+              "coding": [{ "system": "http://loinc.org", "code": "53037-8", "display": "Genomic ref allele" }]
+            },
+            "valueString": "C"
+          },
+          {
+            "code": {
+              "coding": [{ "system": "http://loinc.org", "code": "69547-8", "display": "Genomic alt allele" }]
+            },
+            "valueString": "T"
+          },
+          {
+            "code": {
+              "coding": [{ "system": "http://loinc.org", "code": "48004-6", "display": "Genomic coordinate system" }]
+            },
+            "valueCodeableConcept": {
+              "coding": [{ "system": "http://sequenceontology.org", "code": "SO:0001024", "display": "0-based interval counting" }]
+            }
+          },
+          {
+            "code": {
+              "coding": [{ "system": "http://loinc.org", "code": "81290-9", "display": "HGVS name" }]
+            },
+            "valueString": "NM_005228.5(EGFR):c.2573T>G (p.L858R)"
+          },
+          {
+            "code": {
+              "coding": [{ "system": "http://loinc.org", "code": "81355-0", "display": "Genomic build" }]
+            },
+            "valueString": "GRCh38"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            { "system": "http://loinc.org", "code": "LA9633-4", "display": "Present" }
+          ]
+        },
+        "interpretation": [
+          {
+            "coding": [
+              { "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation", "code": "POS", "display": "Positive" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:geno-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "geno-1",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype"
+          ]
+        },
+        "status": "final",
+        "category": [
+          { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "laboratory" }] }
+        ],
+        "code": {
+          "coding": [{ "system": "http://loinc.org", "code": "84413-4", "display": "Genotype display" }]
+        },
+        "subject": { "reference": "urn:uuid:pat-1" },
+        "hasMember": [{ "reference": "urn:uuid:var-1" }]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:tximp-1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "tximp-1",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeutic-implication"
+          ]
+        },
+        "status": "final",
+        "category": [
+          { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "laboratory" }] }
+        ],
+        "code": {
+          "coding": [
+            { "system": "http://loinc.org", "code": "81259-4", "display": "Genetic variant clinical significance [Implication]" }
+          ]
+        },
+        "subject": { "reference": "urn:uuid:pat-1" },
+        "derivedFrom": [{ "reference": "urn:uuid:var-1" }],
+        "component": [
+          {
+            "code": { "text": "Therapy" },
+            "valueCodeableConcept": {
+              "coding": [
+                { "system": "http://www.nlm.nih.gov/research/umls/rxnorm", "code": "1597876", "display": "Osimertinib" }
+              ]
+            }
+          },
+          {
+            "code": { "text": "Clinical significance" },
+            "valueCodeableConcept": {
+              "coding": [
+                { "system": "http://loinc.org", "code": "LA6675-8", "display": "Responsive" }
+              ]
+            }
+          },
+          {
+            "code": { "text": "Evidence level" },
+            "valueCodeableConcept": {
+              "coding": [
+                { "system": "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/tbd-codes-cs", "code": "Level-1", "display": "Level 1" }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dr-1",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "dr-1",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              { "system": "http://terminology.hl7.org/CodeSystem/v2-0074", "code": "GE" }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            { "system": "http://loinc.org", "code": "81247-9", "display": "Genetic analysis master panel" }
+          ]
+        },
+        "subject": { "reference": "urn:uuid:pat-1" },
+        "effectiveDateTime": "2025-08-31T12:25:00Z",
+        "issued": "2025-08-31T14:05:00Z",
+        "specimen": [{ "reference": "urn:uuid:spec-1" }],
+        "result": [
+          { "reference": "urn:uuid:var-1" },
+          { "reference": "urn:uuid:geno-1" },
+          { "reference": "urn:uuid:tximp-1" }
+        ],
+        "conclusion": "EGFR p.L858R detected; predicted sensitivity to osimertinib.",
+        "derivedFrom": [{ "reference": "urn:uuid:study-1" }],
+        "presentedForm": [
+          {
+            "contentType": "application/pdf",
+            "url": "https://viewer.example.org/reports/GS-2025-00042.pdf",
+            "title": "Genomic Report PDF"
+          }
+        ]
+      }
+    }
+  ]
+}
