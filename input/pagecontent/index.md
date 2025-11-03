@@ -1,6 +1,8 @@
 # Practitioner Credentials IG — Vision, Scoping, and Alignment
 _Date: 2025-10-23_
 
+{% include BaseUML.svg %}
+
 ## Vision & Scoping
 
 ### Vision

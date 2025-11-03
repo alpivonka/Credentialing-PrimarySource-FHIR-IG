@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir">
    <id value="credentialing-primaysource"/>
    <text>
@@ -51,707 +50,233 @@
       <version value="5.2.0"/>
    </dependsOn>
    <definition>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="copyrightyear"/>
+         </extension>
+         <extension url="value">
+            <valueString value="2025+"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="releaselabel"/>
+         </extension>
+         <extension url="value">
+            <valueString value="ci-build"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="autoload-resources"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-liquid"/>
+         </extension>
+         <extension url="value">
+            <valueString value="template/liquid"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-liquid"/>
+         </extension>
+         <extension url="value">
+            <valueString value="input/liquid"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-qa"/>
+         </extension>
+         <extension url="value">
+            <valueString value="temp/qa"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-temp"/>
+         </extension>
+         <extension url="value">
+            <valueString value="temp/pages"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-output"/>
+         </extension>
+         <extension url="value">
+            <valueString value="output"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-suppressed-warnings"/>
+         </extension>
+         <extension url="value">
+            <valueString value="input/ignoreWarnings.txt"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="path-history"/>
+         </extension>
+         <extension url="value">
+            <valueString value="http://example.com/fhir/psv/history.html"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="template-html"/>
+         </extension>
+         <extension url="value">
+            <valueString value="template-page.html"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="template-md"/>
+         </extension>
+         <extension url="value">
+            <valueString value="template-page-md.html"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-contact"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-context"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-copyright"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-jurisdiction"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-license"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-publisher"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-version"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="apply-wg"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="active-tables"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="fmm-definition"/>
+         </extension>
+         <extension url="value">
+            <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="propagate-status"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="excludelogbinaryformat"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+         <extension url="code">
+            <valueString value="tabbed-snapshots"/>
+         </extension>
+         <extension url="value">
+            <valueString value="true"/>
+         </extension>
+      </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
          <valueCode value="hl7.fhir.uv.tools.r4#0.8.0"/>
       </extension>
       <grouping id="-str-profile">
          <name value="Structures: Resource Profiles"/>
-         <description value="These define constraints on FHIR resources for systems conforming to this implementation guide"/>
+         <description value="These define constraints on FHIR resources for systems conforming to this implementation guide."/>
       </grouping>
       <grouping id="-str-extension">
          <name value="Structures: Extension Definitions"/>
-         <description value="These define constraints on FHIR data types for systems conforming to this implementation guide"/>
+         <description value="These define constraints on FHIR data types for systems conforming to this implementation guide."/>
       </grouping>
       <grouping id="-term-valueset">
          <name value="Terminology: Value Sets"/>
-         <description value="These define sets of codes used by systems conforming to this implementation guide"/>
+         <description value="These define sets of codes used by systems conforming to this implementation guide."/>
       </grouping>
       <grouping id="-term-codesystem">
          <name value="Terminology: Code Systems"/>
-         <description value="These define new code systems used by systems conforming to this implementation guide"/>
+         <description value="These define new code systems used by systems conforming to this implementation guide."/>
       </grouping>
       <grouping id="-ex-example">
          <name value="Example: Example Instances"/>
-         <description value="These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like"/>
+         <description value="These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like."/>
       </grouping>
       <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:extension"/>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
          </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-action.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/action"/>
-         </reference>
-         <name value="Action"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-extension"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Flag"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Flag-flag-license-sanction.html"/>
-         </extension>
-         <reference>
-            <reference value="Flag/flag-license-sanction"/>
-         </reference>
-         <name value="Active Sanction Flag (Board Suspension)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-doc-suspension-order.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/doc-suspension-order"/>
-         </reference>
-         <name value="Board Final Order (Suspension)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-docref-board-response.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/docref-board-response"/>
-         </reference>
-         <name value="Board Verification Response (JSON)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-psv-board-specialty-cs.html"/>
-         </extension>
-         <reference>
-            <reference value="CodeSystem/psv-board-specialty-cs"/>
-         </reference>
-         <name value="Board/Training Specialty (Minimal)"/>
-         <description value="Minimal specialty codes used in examples. Replace/expand with your authoritative list."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-codesystem"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Endpoint"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Endpoint-endpoint-citymed-gme.html"/>
-         </extension>
-         <reference>
-            <reference value="Endpoint/endpoint-citymed-gme"/>
-         </reference>
-         <name value="City Medical Center GME — Verification API"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Organization"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Organization-org-citymed-gme.html"/>
-         </extension>
-         <reference>
-            <reference value="Organization/org-citymed-gme"/>
-         </reference>
-         <name value="City Medical Center — GME"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-docref-csr-fl-7744.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/docref-csr-fl-7744"/>
-         </reference>
-         <name value="CSR Lookup — Florida (CSR-7744)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-docref-csr-ga-2219.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/docref-csr-ga-2219"/>
-         </reference>
-         <name value="CSR Lookup — Georgia (CSR-GA-2219)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-psv-dea-schedule-cs.html"/>
-         </extension>
-         <reference>
-            <reference value="CodeSystem/psv-dea-schedule-cs"/>
-         </reference>
-         <name value="DEA Controlled Substance Schedules (II–V)"/>
-         <description value="Subset of U.S. controlled substance schedules commonly applicable to prescribers. Schedule I excluded."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-codesystem"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Organization"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Organization-org-dea-diversion.html"/>
-         </extension>
-         <reference>
-            <reference value="Organization/org-dea-diversion"/>
-         </reference>
-         <name value="DEA Diversion Control Division"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Endpoint"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Endpoint-endpoint-dea-diversion.html"/>
-         </extension>
-         <reference>
-            <reference value="Endpoint/endpoint-dea-diversion"/>
-         </reference>
-         <name value="DEA Diversion Control — Verification API"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-psv-dea-registrant-type-cs.html"/>
-         </extension>
-         <reference>
-            <reference value="CodeSystem/psv-dea-registrant-type-cs"/>
-         </reference>
-         <name value="DEA Registrant Type"/>
-         <description value="DEA registrant categories relevant to care delivery and dispensing."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-codesystem"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-docref-dea-AB1234567.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/docref-dea-AB1234567"/>
-         </reference>
-         <name value="DEA Registration Lookup (AB1234567)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-docref-dea-BA7654321.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/docref-dea-BA7654321"/>
-         </reference>
-         <name value="DEA Registration Lookup (BA7654321)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-docref-education-bs.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/docref-education-bs"/>
-         </reference>
-         <name value="Degree Verification — BS"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-docref-education-md.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/docref-education-md"/>
-         </reference>
-         <name value="Diploma / Degree Verification — MD"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-docref-abem-verification.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/docref-abem-verification"/>
-         </reference>
-         <name value="docref-abem-verification"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-docref-abim-verification.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/docref-abim-verification"/>
-         </reference>
-         <name value="docref-abim-verification"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Endpoint"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Endpoint-endpoint-abem-verify.html"/>
-         </extension>
-         <reference>
-            <reference value="Endpoint/endpoint-abem-verify"/>
-         </reference>
-         <name value="endpoint-abem-verify"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Endpoint"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Endpoint-endpoint-abim-verify.html"/>
-         </extension>
-         <reference>
-            <reference value="Endpoint/endpoint-abim-verify"/>
-         </reference>
-         <name value="endpoint-abim-verify"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Endpoint"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Endpoint-endpoint-florida-board-verify.html"/>
-         </extension>
-         <reference>
-            <reference value="Endpoint/endpoint-florida-board-verify"/>
-         </reference>
-         <name value="endpoint-florida-board-verify"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-docref-training-fellowship-card.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/docref-training-fellowship-card"/>
-         </reference>
-         <name value="Fellowship Verification — Cardiovascular Disease"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:extension"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-flag-evidence.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/flag-evidence"/>
-         </reference>
-         <name value="Flag Evidence (VerificationResult link)"/>
-         <description value="Carries a reference to the VerificationResult that justifies this Flag."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-extension"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:extension"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-flag-targetLocation.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/flag-targetLocation"/>
-         </reference>
-         <name value="Flag Target Location (element path)"/>
-         <description value="Optional element path (e.g., qualification[license][0]) for UI deep-linking."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-extension"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Flag"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Flag-flag-license-sanction-example.html"/>
-         </extension>
-         <reference>
-            <reference value="Flag/flag-license-sanction-example"/>
-         </reference>
-         <name value="flag-license-sanction-example"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Organization"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Organization-org-florida-medical-board.html"/>
-         </extension>
-         <reference>
-            <reference value="Organization/org-florida-medical-board"/>
-         </reference>
-         <name value="Florida Board of Medicine"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Endpoint"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Endpoint-endpoint-florida-csr-verify.html"/>
-         </extension>
-         <reference>
-            <reference value="Endpoint/endpoint-florida-csr-verify"/>
-         </reference>
-         <name value="Florida CSR — Verification API"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Organization"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Organization-org-florida-csr-authority.html"/>
-         </extension>
-         <reference>
-            <reference value="Organization/org-florida-csr-authority"/>
-         </reference>
-         <name value="Florida Department of Health — CSR"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Endpoint"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Endpoint-endpoint-heartinst-fellowships.html"/>
-         </extension>
-         <reference>
-            <reference value="Endpoint/endpoint-heartinst-fellowships"/>
-         </reference>
-         <name value="Heart Institute — Fellowship Verification API"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Organization"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Organization-org-heart-institute.html"/>
-         </extension>
-         <reference>
-            <reference value="Organization/org-heart-institute"/>
-         </reference>
-         <name value="National Heart Institute"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Organization"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Organization-org-abem.html"/>
-         </extension>
-         <reference>
-            <reference value="Organization/org-abem"/>
-         </reference>
-         <name value="org-abem"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Organization"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Organization-org-abim.html"/>
-         </extension>
-         <reference>
-            <reference value="Organization/org-abim"/>
-         </reference>
-         <name value="org-abim"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Practitioner"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Practitioner-prac-sanction-demo.html"/>
-         </extension>
-         <reference>
-            <reference value="Practitioner/prac-sanction-demo"/>
-         </reference>
-         <name value="Practitioner with License, Sanction, Flag, Evidence"/>
-         <exampleCanonical value="http://example.com/fhir/psv/StructureDefinition/PSVPractitioner"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Provenance"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Provenance-prov-vr-prac-boards-abem.html"/>
-         </extension>
-         <reference>
-            <reference value="Provenance/prov-vr-prac-boards-abem"/>
-         </reference>
-         <name value="prov-vr-prac-boards-abem"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Provenance"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Provenance-prov-vr-prac-boards-abim.html"/>
-         </extension>
-         <reference>
-            <reference value="Provenance/prov-vr-prac-boards-abim"/>
-         </reference>
-         <name value="prov-vr-prac-boards-abim"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Provenance"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Provenance-prov-vr-alex-smith-license-2025Q1.html"/>
-         </extension>
-         <reference>
-            <reference value="Provenance/prov-vr-alex-smith-license-2025Q1"/>
-         </reference>
-         <name value="Provenance for VR — Alex Smith License"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Provenance"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Provenance-prov-vr-dea-AB1234567.html"/>
-         </extension>
-         <reference>
-            <reference value="Provenance/prov-vr-dea-AB1234567"/>
-         </reference>
-         <name value="Provenance for VR — DEA AB1234567"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Provenance"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Provenance-prov-vr-dea-BA7654321.html"/>
-         </extension>
-         <reference>
-            <reference value="Provenance/prov-vr-dea-BA7654321"/>
-         </reference>
-         <name value="Provenance for VR — DEA BA7654321"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Provenance"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Provenance-prov-sanction-apply.html"/>
-         </extension>
-         <reference>
-            <reference value="Provenance/prov-sanction-apply"/>
-         </reference>
-         <name value="Provenance — Apply Board Suspension"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Provenance"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Provenance-prov-vr-csr-fl-7744.html"/>
-         </extension>
-         <reference>
-            <reference value="Provenance/prov-vr-csr-fl-7744"/>
-         </reference>
-         <name value="Provenance — FL CSR VR"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Provenance"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Provenance-prov-vr-csr-ga-2219.html"/>
-         </extension>
-         <reference>
-            <reference value="Provenance/prov-vr-csr-ga-2219"/>
-         </reference>
-         <name value="Provenance — GA CSR VR"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Provenance"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Provenance-prov-vr-education-bs.html"/>
-         </extension>
-         <reference>
-            <reference value="Provenance/prov-vr-education-bs"/>
-         </reference>
-         <name value="Provenance — VR BS Degree"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Provenance"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Provenance-prov-vr-training-fellowship-card.html"/>
-         </extension>
-         <reference>
-            <reference value="Provenance/prov-vr-training-fellowship-card"/>
-         </reference>
-         <name value="Provenance — VR Fellowship (Cardiology)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Provenance"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Provenance-prov-vr-education-md.html"/>
-         </extension>
-         <reference>
-            <reference value="Provenance/prov-vr-education-md"/>
-         </reference>
-         <name value="Provenance — VR MD Degree"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Provenance"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Provenance-prov-vr-training-residency-im.html"/>
-         </extension>
-         <reference>
-            <reference value="Provenance/prov-vr-training-residency-im"/>
-         </reference>
-         <name value="Provenance — VR Residency (IM)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-psv-action-cs.html"/>
-         </extension>
-         <reference>
-            <reference value="CodeSystem/psv-action-cs"/>
-         </reference>
-         <name value="PSV  Action CodeSystem"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-codesystem"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-psv-action-vs.html"/>
-         </extension>
-         <reference>
-            <reference value="ValueSet/psv-action-vs"/>
-         </reference>
-         <name value="PSV Action"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-valueset"/>
-      </resource>
-      <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
@@ -767,6 +292,9 @@
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
@@ -782,6 +310,9 @@
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
@@ -797,6 +328,9 @@
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
@@ -812,6 +346,9 @@
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
@@ -827,6 +364,9 @@
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
@@ -842,6 +382,9 @@
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
@@ -857,6 +400,9 @@
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
@@ -872,6 +418,9 @@
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
@@ -887,6 +436,9 @@
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
@@ -902,6 +454,9 @@
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
@@ -917,6 +472,9 @@
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
@@ -932,6 +490,9 @@
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
@@ -947,6 +508,9 @@
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
@@ -962,34 +526,9 @@
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
          </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-psv-verification-type-vs.html"/>
-         </extension>
-         <reference>
-            <reference value="ValueSet/psv-verification-type-vs"/>
-         </reference>
-         <name value="PSV Verification Type"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-valueset"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-psv-verification-type-cs.html"/>
-         </extension>
-         <reference>
-            <reference value="CodeSystem/psv-verification-type-cs"/>
-         </reference>
-         <name value="PSV Verification Type CodeSystem"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-codesystem"/>
-      </resource>
-      <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
@@ -1005,90 +544,62 @@
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Practitioner"/>
+            <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Practitioner-prac-boards-with-vr.html"/>
+            <valueUri value="StructureDefinition-action.html"/>
          </extension>
          <reference>
-            <reference value="Practitioner/prac-boards-with-vr"/>
+            <reference value="StructureDefinition/action"/>
          </reference>
-         <name value="PSVPractitioner — Board certification(s) with VR, Provenance, Evidence"/>
-         <exampleCanonical value="http://example.com/fhir/psv/StructureDefinition/PSVPractitioner"/>
-         <groupingId value="-ex-example"/>
+         <name value="Action"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Practitioner"/>
+            <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Practitioner-prac-dea-with-vr.html"/>
+            <valueUri value="StructureDefinition-flag-evidence.html"/>
          </extension>
          <reference>
-            <reference value="Practitioner/prac-dea-with-vr"/>
+            <reference value="StructureDefinition/flag-evidence"/>
          </reference>
-         <name value="PSVPractitioner — DEA registration(s) with VR, Provenance, Evidence"/>
-         <exampleCanonical value="http://example.com/fhir/psv/StructureDefinition/PSVPractitioner"/>
-         <groupingId value="-ex-example"/>
+         <name value="Flag Evidence (VerificationResult link)"/>
+         <description value="Carries a reference to the VerificationResult that justifies this Flag."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Practitioner"/>
+            <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Practitioner-prac-education-with-vr.html"/>
+            <valueUri value="StructureDefinition-flag-targetLocation.html"/>
          </extension>
          <reference>
-            <reference value="Practitioner/prac-education-with-vr"/>
+            <reference value="StructureDefinition/flag-targetLocation"/>
          </reference>
-         <name value="PSVPractitioner — Education (degree) with VR, Provenance, Evidence"/>
-         <exampleCanonical value="http://example.com/fhir/psv/StructureDefinition/PSVPractitioner"/>
-         <groupingId value="-ex-example"/>
+         <name value="Flag Target Location (element path)"/>
+         <description value="Optional element path (e.g., qualification[license][0]) for UI deep-linking."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-extension"/>
       </resource>
       <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Practitioner"/>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
          </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Practitioner-prac-jordan-rivera-license-only.html"/>
-         </extension>
-         <reference>
-            <reference value="Practitioner/prac-jordan-rivera-license-only"/>
-         </reference>
-         <name value="PSVPractitioner — License slice populated"/>
-         <exampleCanonical value="http://example.com/fhir/psv/StructureDefinition/PSVPractitioner"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Practitioner"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Practitioner-prac-state-csr-with-vr.html"/>
-         </extension>
-         <reference>
-            <reference value="Practitioner/prac-state-csr-with-vr"/>
-         </reference>
-         <name value="PSVPractitioner — State CSR with VR, Provenance, Evidence"/>
-         <exampleCanonical value="http://example.com/fhir/psv/StructureDefinition/PSVPractitioner"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Practitioner"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Practitioner-prac-training-with-vr.html"/>
-         </extension>
-         <reference>
-            <reference value="Practitioner/prac-training-with-vr"/>
-         </reference>
-         <name value="PSVPractitioner — Training (residency &amp; fellowship) with VR, Provenance, Evidence"/>
-         <exampleCanonical value="http://example.com/fhir/psv/StructureDefinition/PSVPractitioner"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:extension"/>
          </extension>
@@ -1103,6 +614,9 @@
          <groupingId value="-str-extension"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:extension"/>
          </extension>
@@ -1117,6 +631,9 @@
          <groupingId value="-str-extension"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:extension"/>
          </extension>
@@ -1132,62 +649,9 @@
          <groupingId value="-str-extension"/>
       </resource>
       <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
          </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-psv-qualification-status-cs.html"/>
-         </extension>
-         <reference>
-            <reference value="CodeSystem/psv-qualification-status-cs"/>
-         </reference>
-         <name value="Qualification Status"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-codesystem"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="DocumentReference"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="DocumentReference-docref-training-residency-im.html"/>
-         </extension>
-         <reference>
-            <reference value="DocumentReference/docref-training-residency-im"/>
-         </reference>
-         <name value="Residency Verification — Internal Medicine"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Organization"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Organization-org-state-university-med.html"/>
-         </extension>
-         <reference>
-            <reference value="Organization/org-state-university-med"/>
-         </reference>
-         <name value="State University College of Medicine"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Endpoint"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Endpoint-endpoint-state-university-registrar.html"/>
-         </extension>
-         <reference>
-            <reference value="Endpoint/endpoint-state-university-registrar"/>
-         </reference>
-         <name value="State University Registrar — Verification API"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:extension"/>
          </extension>
@@ -1202,21 +666,9 @@
          <groupingId value="-str-extension"/>
       </resource>
       <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
          </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-psv-completion-status-cs.html"/>
-         </extension>
-         <reference>
-            <reference value="CodeSystem/psv-completion-status-cs"/>
-         </reference>
-         <name value="Training Completion Status"/>
-         <description value="Completion state for a training program."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-term-codesystem"/>
-      </resource>
-      <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:extension"/>
          </extension>
@@ -1231,203 +683,43 @@
          <groupingId value="-str-extension"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
+            <valueString value="ValueSet"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-psv-training-type-cs.html"/>
+            <valueUri value="ValueSet-psv-action-vs.html"/>
          </extension>
          <reference>
-            <reference value="CodeSystem/psv-training-type-cs"/>
+            <reference value="ValueSet/psv-action-vs"/>
          </reference>
-         <name value="Training Type"/>
-         <description value="Types of postgraduate clinical training programs."/>
+         <name value="PSV Action"/>
          <exampleBoolean value="false"/>
-         <groupingId value="-term-codesystem"/>
+         <groupingId value="-term-valueset"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="VerificationResult"/>
+            <valueString value="ValueSet"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="VerificationResult-vr-alex-smith-license-2025Q1.html"/>
+            <valueUri value="ValueSet-psv-verification-type-vs.html"/>
          </extension>
          <reference>
-            <reference value="VerificationResult/vr-alex-smith-license-2025Q1"/>
+            <reference value="ValueSet/psv-verification-type-vs"/>
          </reference>
-         <name value="VR — Alex Smith License (2025 Q1)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
+         <name value="PSV Verification Type"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
       </resource>
       <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="VerificationResult"/>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
          </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="VerificationResult-vr-education-bs.html"/>
-         </extension>
-         <reference>
-            <reference value="VerificationResult/vr-education-bs"/>
-         </reference>
-         <name value="VR — BS Degree (Primary Source)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="VerificationResult"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="VerificationResult-vr-dea-AB1234567.html"/>
-         </extension>
-         <reference>
-            <reference value="VerificationResult/vr-dea-AB1234567"/>
-         </reference>
-         <name value="VR — DEA AB1234567 (Primary Source)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="VerificationResult"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="VerificationResult-vr-dea-BA7654321.html"/>
-         </extension>
-         <reference>
-            <reference value="VerificationResult/vr-dea-BA7654321"/>
-         </reference>
-         <name value="VR — DEA BA7654321 (Primary Source)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="VerificationResult"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="VerificationResult-vr-training-fellowship-card.html"/>
-         </extension>
-         <reference>
-            <reference value="VerificationResult/vr-training-fellowship-card"/>
-         </reference>
-         <name value="VR — Fellowship (Cardiology) Primary Source"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="VerificationResult"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="VerificationResult-vr-csr-fl-7744.html"/>
-         </extension>
-         <reference>
-            <reference value="VerificationResult/vr-csr-fl-7744"/>
-         </reference>
-         <name value="VR — FL CSR (Primary Source)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="VerificationResult"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="VerificationResult-vr-csr-ga-2219.html"/>
-         </extension>
-         <reference>
-            <reference value="VerificationResult/vr-csr-ga-2219"/>
-         </reference>
-         <name value="VR — GA CSR (Primary Source)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="VerificationResult"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="VerificationResult-vr-license-suspension.html"/>
-         </extension>
-         <reference>
-            <reference value="VerificationResult/vr-license-suspension"/>
-         </reference>
-         <name value="VR — License Suspension from State Board"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="VerificationResult"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="VerificationResult-vr-education-md.html"/>
-         </extension>
-         <reference>
-            <reference value="VerificationResult/vr-education-md"/>
-         </reference>
-         <name value="VR — MD Degree (Primary Source)"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="VerificationResult"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="VerificationResult-vr-training-residency-im.html"/>
-         </extension>
-         <reference>
-            <reference value="VerificationResult/vr-training-residency-im"/>
-         </reference>
-         <name value="VR — Residency (IM) Primary Source"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="VerificationResult"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="VerificationResult-vr-license-jordan-rivera.html"/>
-         </extension>
-         <reference>
-            <reference value="VerificationResult/vr-license-jordan-rivera"/>
-         </reference>
-         <name value="VR — State License Primary Source"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="VerificationResult"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="VerificationResult-vr-prac-boards-abem.html"/>
-         </extension>
-         <reference>
-            <reference value="VerificationResult/vr-prac-boards-abem"/>
-         </reference>
-         <name value="vr-prac-boards-abem"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="VerificationResult"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="VerificationResult-vr-prac-boards-abim.html"/>
-         </extension>
-         <reference>
-            <reference value="VerificationResult/vr-prac-boards-abim"/>
-         </reference>
-         <name value="vr-prac-boards-abim"/>
-         <exampleBoolean value="true"/>
-         <groupingId value="-ex-example"/>
-      </resource>
-      <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="ValueSet"/>
          </extension>
@@ -1442,6 +734,9 @@
          <groupingId value="-term-valueset"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="ValueSet"/>
          </extension>
@@ -1457,6 +752,9 @@
          <groupingId value="-term-valueset"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="ValueSet"/>
          </extension>
@@ -1472,6 +770,9 @@
          <groupingId value="-term-valueset"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="ValueSet"/>
          </extension>
@@ -1487,6 +788,9 @@
          <groupingId value="-term-valueset"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="ValueSet"/>
          </extension>
@@ -1502,6 +806,9 @@
          <groupingId value="-term-valueset"/>
       </resource>
       <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="ValueSet"/>
          </extension>
@@ -1515,6 +822,1201 @@
          <description value="Allowed training types for practitioner qualifications."/>
          <exampleBoolean value="false"/>
          <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-psv-board-specialty-cs.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/psv-board-specialty-cs"/>
+         </reference>
+         <name value="Board/Training Specialty (Minimal)"/>
+         <description value="Minimal specialty codes used in examples. Replace/expand with your authoritative list."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-psv-dea-schedule-cs.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/psv-dea-schedule-cs"/>
+         </reference>
+         <name value="DEA Controlled Substance Schedules (II–V)"/>
+         <description value="Subset of U.S. controlled substance schedules commonly applicable to prescribers. Schedule I excluded."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-psv-dea-registrant-type-cs.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/psv-dea-registrant-type-cs"/>
+         </reference>
+         <name value="DEA Registrant Type"/>
+         <description value="DEA registrant categories relevant to care delivery and dispensing."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-psv-action-cs.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/psv-action-cs"/>
+         </reference>
+         <name value="PSV  Action CodeSystem"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-psv-verification-type-cs.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/psv-verification-type-cs"/>
+         </reference>
+         <name value="PSV Verification Type CodeSystem"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-psv-qualification-status-cs.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/psv-qualification-status-cs"/>
+         </reference>
+         <name value="Qualification Status"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-psv-completion-status-cs.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/psv-completion-status-cs"/>
+         </reference>
+         <name value="Training Completion Status"/>
+         <description value="Completion state for a training program."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-psv-training-type-cs.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/psv-training-type-cs"/>
+         </reference>
+         <name value="Training Type"/>
+         <description value="Types of postgraduate clinical training programs."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Flag"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Flag-flag-license-sanction.html"/>
+         </extension>
+         <reference>
+            <reference value="Flag/flag-license-sanction"/>
+         </reference>
+         <name value="Active Sanction Flag (Board Suspension)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-doc-suspension-order.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/doc-suspension-order"/>
+         </reference>
+         <name value="Board Final Order (Suspension)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-docref-board-response.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/docref-board-response"/>
+         </reference>
+         <name value="Board Verification Response (JSON)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-docref-csr-fl-7744.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/docref-csr-fl-7744"/>
+         </reference>
+         <name value="CSR Lookup — Florida (CSR-7744)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-docref-csr-ga-2219.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/docref-csr-ga-2219"/>
+         </reference>
+         <name value="CSR Lookup — Georgia (CSR-GA-2219)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Endpoint"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Endpoint-endpoint-citymed-gme.html"/>
+         </extension>
+         <reference>
+            <reference value="Endpoint/endpoint-citymed-gme"/>
+         </reference>
+         <name value="City Medical Center GME — Verification API"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-org-citymed-gme.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/org-citymed-gme"/>
+         </reference>
+         <name value="City Medical Center — GME"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-org-dea-diversion.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/org-dea-diversion"/>
+         </reference>
+         <name value="DEA Diversion Control Division"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Endpoint"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Endpoint-endpoint-dea-diversion.html"/>
+         </extension>
+         <reference>
+            <reference value="Endpoint/endpoint-dea-diversion"/>
+         </reference>
+         <name value="DEA Diversion Control — Verification API"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-docref-dea-AB1234567.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/docref-dea-AB1234567"/>
+         </reference>
+         <name value="DEA Registration Lookup (AB1234567)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-docref-dea-BA7654321.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/docref-dea-BA7654321"/>
+         </reference>
+         <name value="DEA Registration Lookup (BA7654321)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-docref-education-bs.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/docref-education-bs"/>
+         </reference>
+         <name value="Degree Verification — BS"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-docref-education-md.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/docref-education-md"/>
+         </reference>
+         <name value="Diploma / Degree Verification — MD"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-docref-training-fellowship-card.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/docref-training-fellowship-card"/>
+         </reference>
+         <name value="Fellowship Verification — Cardiovascular Disease"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-org-florida-medical-board.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/org-florida-medical-board"/>
+         </reference>
+         <name value="Florida Board of Medicine"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Endpoint"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Endpoint-endpoint-florida-csr-verify.html"/>
+         </extension>
+         <reference>
+            <reference value="Endpoint/endpoint-florida-csr-verify"/>
+         </reference>
+         <name value="Florida CSR — Verification API"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-org-florida-csr-authority.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/org-florida-csr-authority"/>
+         </reference>
+         <name value="Florida Department of Health — CSR"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Endpoint"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Endpoint-endpoint-heartinst-fellowships.html"/>
+         </extension>
+         <reference>
+            <reference value="Endpoint/endpoint-heartinst-fellowships"/>
+         </reference>
+         <name value="Heart Institute — Fellowship Verification API"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-org-heart-institute.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/org-heart-institute"/>
+         </reference>
+         <name value="National Heart Institute"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-prac-boards-with-vr.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/prac-boards-with-vr"/>
+         </reference>
+         <name value="PSVPractitioner — Board certification(s) with VR, Provenance, Evidence"/>
+         <exampleCanonical value="http://example.com/fhir/psv/StructureDefinition/PSVPractitioner"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-prac-dea-with-vr.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/prac-dea-with-vr"/>
+         </reference>
+         <name value="PSVPractitioner — DEA registration(s) with VR, Provenance, Evidence"/>
+         <exampleCanonical value="http://example.com/fhir/psv/StructureDefinition/PSVPractitioner"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-prac-education-with-vr.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/prac-education-with-vr"/>
+         </reference>
+         <name value="PSVPractitioner — Education (degree) with VR, Provenance, Evidence"/>
+         <exampleCanonical value="http://example.com/fhir/psv/StructureDefinition/PSVPractitioner"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-prac-jordan-rivera-license-only.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/prac-jordan-rivera-license-only"/>
+         </reference>
+         <name value="PSVPractitioner — License slice populated"/>
+         <exampleCanonical value="http://example.com/fhir/psv/StructureDefinition/PSVPractitioner"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-prac-state-csr-with-vr.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/prac-state-csr-with-vr"/>
+         </reference>
+         <name value="PSVPractitioner — State CSR with VR, Provenance, Evidence"/>
+         <exampleCanonical value="http://example.com/fhir/psv/StructureDefinition/PSVPractitioner"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-prac-training-with-vr.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/prac-training-with-vr"/>
+         </reference>
+         <name value="PSVPractitioner — Training (residency &amp; fellowship) with VR, Provenance, Evidence"/>
+         <exampleCanonical value="http://example.com/fhir/psv/StructureDefinition/PSVPractitioner"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-prac-sanction-demo.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/prac-sanction-demo"/>
+         </reference>
+         <name value="Practitioner with License, Sanction, Flag, Evidence"/>
+         <exampleCanonical value="http://example.com/fhir/psv/StructureDefinition/PSVPractitioner"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Provenance"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Provenance-prov-vr-alex-smith-license-2025Q1.html"/>
+         </extension>
+         <reference>
+            <reference value="Provenance/prov-vr-alex-smith-license-2025Q1"/>
+         </reference>
+         <name value="Provenance for VR — Alex Smith License"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Provenance"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Provenance-prov-vr-dea-AB1234567.html"/>
+         </extension>
+         <reference>
+            <reference value="Provenance/prov-vr-dea-AB1234567"/>
+         </reference>
+         <name value="Provenance for VR — DEA AB1234567"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Provenance"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Provenance-prov-vr-dea-BA7654321.html"/>
+         </extension>
+         <reference>
+            <reference value="Provenance/prov-vr-dea-BA7654321"/>
+         </reference>
+         <name value="Provenance for VR — DEA BA7654321"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Provenance"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Provenance-prov-sanction-apply.html"/>
+         </extension>
+         <reference>
+            <reference value="Provenance/prov-sanction-apply"/>
+         </reference>
+         <name value="Provenance — Apply Board Suspension"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Provenance"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Provenance-prov-vr-csr-fl-7744.html"/>
+         </extension>
+         <reference>
+            <reference value="Provenance/prov-vr-csr-fl-7744"/>
+         </reference>
+         <name value="Provenance — FL CSR VR"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Provenance"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Provenance-prov-vr-csr-ga-2219.html"/>
+         </extension>
+         <reference>
+            <reference value="Provenance/prov-vr-csr-ga-2219"/>
+         </reference>
+         <name value="Provenance — GA CSR VR"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Provenance"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Provenance-prov-vr-education-bs.html"/>
+         </extension>
+         <reference>
+            <reference value="Provenance/prov-vr-education-bs"/>
+         </reference>
+         <name value="Provenance — VR BS Degree"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Provenance"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Provenance-prov-vr-training-fellowship-card.html"/>
+         </extension>
+         <reference>
+            <reference value="Provenance/prov-vr-training-fellowship-card"/>
+         </reference>
+         <name value="Provenance — VR Fellowship (Cardiology)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Provenance"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Provenance-prov-vr-education-md.html"/>
+         </extension>
+         <reference>
+            <reference value="Provenance/prov-vr-education-md"/>
+         </reference>
+         <name value="Provenance — VR MD Degree"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Provenance"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Provenance-prov-vr-training-residency-im.html"/>
+         </extension>
+         <reference>
+            <reference value="Provenance/prov-vr-training-residency-im"/>
+         </reference>
+         <name value="Provenance — VR Residency (IM)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-docref-training-residency-im.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/docref-training-residency-im"/>
+         </reference>
+         <name value="Residency Verification — Internal Medicine"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-org-state-university-med.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/org-state-university-med"/>
+         </reference>
+         <name value="State University College of Medicine"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Endpoint"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Endpoint-endpoint-state-university-registrar.html"/>
+         </extension>
+         <reference>
+            <reference value="Endpoint/endpoint-state-university-registrar"/>
+         </reference>
+         <name value="State University Registrar — Verification API"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="VerificationResult"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="VerificationResult-vr-alex-smith-license-2025Q1.html"/>
+         </extension>
+         <reference>
+            <reference value="VerificationResult/vr-alex-smith-license-2025Q1"/>
+         </reference>
+         <name value="VR — Alex Smith License (2025 Q1)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="VerificationResult"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="VerificationResult-vr-education-bs.html"/>
+         </extension>
+         <reference>
+            <reference value="VerificationResult/vr-education-bs"/>
+         </reference>
+         <name value="VR — BS Degree (Primary Source)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="VerificationResult"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="VerificationResult-vr-dea-AB1234567.html"/>
+         </extension>
+         <reference>
+            <reference value="VerificationResult/vr-dea-AB1234567"/>
+         </reference>
+         <name value="VR — DEA AB1234567 (Primary Source)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="VerificationResult"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="VerificationResult-vr-dea-BA7654321.html"/>
+         </extension>
+         <reference>
+            <reference value="VerificationResult/vr-dea-BA7654321"/>
+         </reference>
+         <name value="VR — DEA BA7654321 (Primary Source)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="VerificationResult"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="VerificationResult-vr-csr-fl-7744.html"/>
+         </extension>
+         <reference>
+            <reference value="VerificationResult/vr-csr-fl-7744"/>
+         </reference>
+         <name value="VR — FL CSR (Primary Source)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="VerificationResult"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="VerificationResult-vr-training-fellowship-card.html"/>
+         </extension>
+         <reference>
+            <reference value="VerificationResult/vr-training-fellowship-card"/>
+         </reference>
+         <name value="VR — Fellowship (Cardiology) Primary Source"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="VerificationResult"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="VerificationResult-vr-csr-ga-2219.html"/>
+         </extension>
+         <reference>
+            <reference value="VerificationResult/vr-csr-ga-2219"/>
+         </reference>
+         <name value="VR — GA CSR (Primary Source)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="VerificationResult"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="VerificationResult-vr-license-suspension.html"/>
+         </extension>
+         <reference>
+            <reference value="VerificationResult/vr-license-suspension"/>
+         </reference>
+         <name value="VR — License Suspension from State Board"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="VerificationResult"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="VerificationResult-vr-education-md.html"/>
+         </extension>
+         <reference>
+            <reference value="VerificationResult/vr-education-md"/>
+         </reference>
+         <name value="VR — MD Degree (Primary Source)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="VerificationResult"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="VerificationResult-vr-training-residency-im.html"/>
+         </extension>
+         <reference>
+            <reference value="VerificationResult/vr-training-residency-im"/>
+         </reference>
+         <name value="VR — Residency (IM) Primary Source"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="VerificationResult"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="VerificationResult-vr-license-jordan-rivera.html"/>
+         </extension>
+         <reference>
+            <reference value="VerificationResult/vr-license-jordan-rivera"/>
+         </reference>
+         <name value="VR — State License Primary Source"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-docref-abem-verification.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/docref-abem-verification"/>
+         </reference>
+         <name value="docref-abem-verification"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DocumentReference"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DocumentReference-docref-abim-verification.html"/>
+         </extension>
+         <reference>
+            <reference value="DocumentReference/docref-abim-verification"/>
+         </reference>
+         <name value="docref-abim-verification"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Endpoint"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Endpoint-endpoint-abem-verify.html"/>
+         </extension>
+         <reference>
+            <reference value="Endpoint/endpoint-abem-verify"/>
+         </reference>
+         <name value="endpoint-abem-verify"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Endpoint"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Endpoint-endpoint-abim-verify.html"/>
+         </extension>
+         <reference>
+            <reference value="Endpoint/endpoint-abim-verify"/>
+         </reference>
+         <name value="endpoint-abim-verify"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Endpoint"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Endpoint-endpoint-florida-board-verify.html"/>
+         </extension>
+         <reference>
+            <reference value="Endpoint/endpoint-florida-board-verify"/>
+         </reference>
+         <name value="endpoint-florida-board-verify"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Flag"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Flag-flag-license-sanction-example.html"/>
+         </extension>
+         <reference>
+            <reference value="Flag/flag-license-sanction-example"/>
+         </reference>
+         <name value="flag-license-sanction-example"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-org-abem.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/org-abem"/>
+         </reference>
+         <name value="org-abem"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-org-abim.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/org-abim"/>
+         </reference>
+         <name value="org-abim"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Provenance"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Provenance-prov-vr-prac-boards-abem.html"/>
+         </extension>
+         <reference>
+            <reference value="Provenance/prov-vr-prac-boards-abem"/>
+         </reference>
+         <name value="prov-vr-prac-boards-abem"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Provenance"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Provenance-prov-vr-prac-boards-abim.html"/>
+         </extension>
+         <reference>
+            <reference value="Provenance/prov-vr-prac-boards-abim"/>
+         </reference>
+         <name value="prov-vr-prac-boards-abim"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="VerificationResult"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="VerificationResult-vr-prac-boards-abem.html"/>
+         </extension>
+         <reference>
+            <reference value="VerificationResult/vr-prac-boards-abem"/>
+         </reference>
+         <name value="vr-prac-boards-abem"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="VerificationResult"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="VerificationResult-vr-prac-boards-abim.html"/>
+         </extension>
+         <reference>
+            <reference value="VerificationResult/vr-prac-boards-abim"/>
+         </reference>
+         <name value="vr-prac-boards-abim"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
       </resource>
       <page>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -2059,14 +2561,6 @@
          </page>
       </page>
       <parameter>
-         <code value="copyrightyear"/>
-         <value value="2025+"/>
-      </parameter>
-      <parameter>
-         <code value="releaselabel"/>
-         <value value="ci-build"/>
-      </parameter>
-      <parameter>
          <code value="path-resource"/>
          <value value="input/capabilities"/>
       </parameter>
@@ -2123,6 +2617,22 @@
          <value value="input/images"/>
       </parameter>
       <parameter>
+         <code value="path-tx-cache"/>
+         <value value="input-cache/txcache"/>
+      </parameter>
+      <parameter>
+         <code value="copyrightyear"/>
+         <value value="2025+"/>
+      </parameter>
+      <parameter>
+         <code value="releaselabel"/>
+         <value value="ci-build"/>
+      </parameter>
+      <parameter>
+         <code value="autoload-resources"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
          <code value="path-liquid"/>
          <value value="template/liquid"/>
       </parameter>
@@ -2141,10 +2651,6 @@
       <parameter>
          <code value="path-output"/>
          <value value="output"/>
-      </parameter>
-      <parameter>
-         <code value="path-tx-cache"/>
-         <value value="input-cache/txcache"/>
       </parameter>
       <parameter>
          <code value="path-suppressed-warnings"/>
@@ -2191,7 +2697,27 @@
          <value value="true"/>
       </parameter>
       <parameter>
+         <code value="apply-wg"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
          <code value="active-tables"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="fmm-definition"/>
+         <value value="http://hl7.org/fhir/versions.html#maturity"/>
+      </parameter>
+      <parameter>
+         <code value="propagate-status"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="excludelogbinaryformat"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="tabbed-snapshots"/>
          <value value="true"/>
       </parameter>
    </definition>

@@ -1,0 +1,124 @@
+@startuml
+skinparam dpi 140
+skinparam classFontSize 12
+skinparam linetype ortho
+skinparam shadowing false
+skinparam rectangle {
+  BackgroundColor #FAFAFA
+  BorderColor #999999
+}
+skinparam note {
+  BorderColor #AAAAAA
+  BackgroundColor #FFFFE0
+}
+
+title PSV Credentialing Overview (FHIR R4/R5-aligned)
+
+' ─────────────── STEREOTYPES (no spaces makes PlantUML happier) ───────────────
+'  <<FHIRResource>>, <<Profile>>, <<Optional>>
+
+' ─────────────────────────── Core actors & identities ──────────────────────────
+class Practitioner <<FHIRResource>> {
+  id
+  identifier [NPI,...]
+  name / telecom / address
+  qualification[*]   ' sliced in PSVPractitioner
+}
+
+class PSVPractitioner <<Profile>> {
+  ' Profile of Practitioner
+  qualification[license|board|dea|state-csr|
+    education|training|cert-aprn-pa|cert-pharm|
+    life-support|compact|mate-training]
+}
+
+
+
+class Organization <<FHIRResource>> {
+  id
+  identifier [TIN,...]
+  name
+}
+
+class Endpoint <<FHIRResource>>
+
+' ───────────────────────────── Evidence & audit layer ──────────────────────────
+class VerificationResult <<FHIRResource>> {
+  id
+  status / statusDate
+  verificationType
+  target[1..*] -> Resource
+  targetLocation[0..*]   ' e.g., "qualification[dea][0]"
+  primarySource[1..*]
+  validationStatus
+  note
+}
+
+class Provenance <<FHIRResource>> {
+  id
+  recorded
+  target[1..*] -> Resource
+  agent[1..*]
+  entity[0..*] (what = source)
+}
+
+class DocumentReference <<FHIRResource>> {
+  id
+  status
+  type (e.g., Board Order)
+  date
+  content[1..*].attachment
+}
+
+' ───────────────────────────── Operational signaling ───────────────────────────
+class Flag <<FHIRResource>> {
+  id
+  status
+  category (e.g., sanction)
+  code (e.g., Board suspension)
+  subject -> Practitioner
+  period
+}
+
+
+' ───────────────────────────── Relationships ─────────────────────────────
+' Directory/context
+Organization "1" o-- "0..*" Endpoint : exposes >
+
+' Evidence targeting (who/what was verified)
+VerificationResult "0..*" --> "1..*" Practitioner : target
+VerificationResult "0..*" --> "0..*" Organization : target
+VerificationResult "0..*" ..> DocumentReference : evidence / attachments
+
+' Audit of changes driven by evidence
+Provenance "0..*" --> Practitioner : target
+Provenance "0..*" --> Flag : target
+Provenance "0..*" ..> VerificationResult : entity[what=source]
+
+' Operational signal
+Flag "0..*" --> Practitioner : subject
+
+
+' Profile link (profile constrains base resource)
+PSVPractitioner -[#5555AA]u- Practitioner : <<constrains>>
+
+' ───────────────────────────── Notes ─────────────────────────────
+note right of VerificationResult
+  Evidence of a check (license, DEA, board,
+  exclusions, etc.). targetLocation points to
+  the specific qualification slice path, e.g.:
+  "qualification[license][0]".
+end note
+
+note right of Flag
+  Operational visibility. Subject should be
+  Practitioner (global).
+  Proof lives in VerificationResult.
+end note
+
+note top of PSVPractitioner
+  Sliced qualifications:
+  license, board, dea, state-csr,
+  education, training, certification,etc
+end note
+@enduml

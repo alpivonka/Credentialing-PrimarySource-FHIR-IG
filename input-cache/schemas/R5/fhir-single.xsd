@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Fri, Oct 24, 2025 13:57+0000 for FHIR v6.0.0-ballot3 
+  Generated on Tue, Oct 28, 2025 19:11+0000 for FHIR v6.0.0-ballot3 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="6.0.0-ballot3">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -2099,11 +2099,6 @@
       <xs:enumeration value="Task">
         <xs:annotation>
           <xs:documentation xml:lang="en">Task</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Transport">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Transport</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="VisionPrescription">
@@ -15913,6 +15908,7 @@ A coverage may only be responsible for specific types of charges, and the sequen
             <xs:element name="timingAge" type="Age"/>
             <xs:element name="timingRange" type="Range"/>
             <xs:element name="timingDuration" type="Duration"/>
+            <xs:element name="timingRelativeTime" type="RelativeTime"/>
           </xs:choice>
           <xs:choice minOccurs="0" maxOccurs="1" >
             <xs:annotation>
@@ -22617,9 +22613,9 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">A code to indicate whether the nature of the request is: Claim - A request to an Insurer to adjudicate the supplied charges for health care goods and services under the identified policy and to pay the determined Benefit amount, if any; Preauthorization - A request to an Insurer to adjudicate the supplied proposed future charges for health care goods and services under the identified policy and to approve the services and provide the expected benefit amounts and potentially to reserve funds to pay the benefits when Claims for the indicated services are later submitted; or, Pre-determination - A request to an Insurer to adjudicate the supplied 'what if' charges for health care goods and services under the identified policy and report back what the Benefit payable would be had the services actually been provided.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="patient" minOccurs="1" maxOccurs="1" type="Reference">
+          <xs:element name="subject" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The party to whom the professional services and/or products have been supplied or are being considered and for whom actual or forecast reimbursement is sought.</xs:documentation>
+              <xs:documentation xml:lang="en">The party/group to whom the professional services and/or products have been supplied or are being considered and for whom actual or forecast reimbursement is sought.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="billablePeriod" minOccurs="0" maxOccurs="1" type="Period">
@@ -22836,11 +22832,6 @@ of the resource representation.</xs:documentation>
           <xs:element name="provider" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Member of the team who provided the product or service.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="responsible" minOccurs="0" maxOccurs="1" type="boolean">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The party who is billing and/or responsible for the claimed products or services.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="role" minOccurs="0" maxOccurs="1" type="CodeableConcept">
@@ -23119,6 +23110,11 @@ of the resource representation.</xs:documentation>
           <xs:element name="traceNumber" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
               <xs:documentation xml:lang="en">Trace number for tracking purposes. May be defined at the jurisdiction level or between trading partners.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="patient" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The party to whom the professional services and/or products have been supplied or are being considered and for whom actual for facast reimbursement is sought.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="careTeamSequence" minOccurs="0" maxOccurs="unbounded" type="positiveInt">
@@ -23556,9 +23552,9 @@ of the resource representation.</xs:documentation>
               <xs:documentation xml:lang="en">A code to indicate whether the nature of the request is: Claim - A request to an Insurer to adjudicate the supplied charges for health care goods and services under the identified policy and to pay the determined Benefit amount, if any; Preauthorization - A request to an Insurer to adjudicate the supplied proposed future charges for health care goods and services under the identified policy and to approve the services and provide the expected benefit amounts and potentially to reserve funds to pay the benefits when Claims for the indicated services are later submitted; or, Pre-determination - A request to an Insurer to adjudicate the supplied 'what if' charges for health care goods and services under the identified policy and report back what the Benefit payable would be had the services actually been provided.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="patient" minOccurs="1" maxOccurs="1" type="Reference">
+          <xs:element name="subject" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The party to whom the professional services and/or products have been supplied or are being considered and for whom actual for facast reimbursement is sought.</xs:documentation>
+              <xs:documentation xml:lang="en">The party/group to whom the professional services and/or products have been supplied or are being considered and for whom actual for facast reimbursement is sought.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="created" minOccurs="1" maxOccurs="1" type="dateTime">
@@ -24030,6 +24026,11 @@ of the resource representation.</xs:documentation>
           <xs:element name="traceNumber" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
               <xs:documentation xml:lang="en">Trace number for tracking purposes. May be defined at the jurisdiction level or between trading partners.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="patient" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The party to whom the professional services and/or products have been supplied or are being considered and for whom actual for facast reimbursement is sought.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="informationSequence" minOccurs="0" maxOccurs="unbounded" type="positiveInt">
@@ -25663,7 +25664,7 @@ of the resource representation.</xs:documentation>
           </xs:element>
           <xs:element name="medium" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A channel that was used for this communication (e.g. email, fax).</xs:documentation>
+              <xs:documentation xml:lang="en">A channel that was used for this communication (e.g. email, fax, SMS).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="subject" minOccurs="0" maxOccurs="1" type="Reference">
@@ -28924,7 +28925,7 @@ The actual author of the section when it is not the author of the composition. I
           </xs:element>
           <xs:element name="order" minOccurs="0" maxOccurs="1" type="positiveInt">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The order of applicability of this coverage relative to other coverages which are currently in force. Note, there may be gaps in the numbering and this does not imply primary, secondary etc. as the specific positioning of coverages depends upon the episode of care. For example; a patient might have (0) auto insurance (1) their own health insurance and (2) spouse's health insurance. When claiming for treatments which were not the result of an auto accident then only coverages (1) and (2) above would be applicatble and would apply in the order specified in parenthesis.</xs:documentation>
+              <xs:documentation xml:lang="en">The order of applicability of this coverage relative to other coverages which are currently in force. Note, there may be gaps in the numbering and this does not imply primary, secondary etc. as the specific positioning of coverages depends upon the episode of care. For example; a patient might have (0) auto insurance (1) their own health insurance and (2) spouse's health insurance. When claiming for treatments which were not the result of an auto accident then only coverages (1) and (2) above would be applicable and would apply in the order specified in parenthesis. Coverage.order conveys the Coordination of Benefit (COB) ordering of coverage independent of use-case, for a use-case dependent set of Coverages see Account.coverage.priority.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="network" minOccurs="0" maxOccurs="1" type="string">
@@ -29838,6 +29839,11 @@ The actual author of the section when it is not the author of the composition. I
               <xs:documentation xml:lang="en">The quality of the evidence supporting identification of the detected issue. The code system used specifies the quality scale used to grade this evidence source while the code specifies the actual quality score (represented as a coded value) associated with the evidence.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="expectedOnsetType" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The time frame in which the clinical effects of the detected issue may be expected to occur. Rapid refers to an expected onset within 24 hours. Delayed refers to an expected onset in more than 24 hours.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="managementCode" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">An indication of the importance or type of step that should or may be taken in order to address the detected issue. This is different than mitigation in that it is not specifically providing actions to be taken, rather general suggestions about approach.</xs:documentation>
@@ -30285,6 +30291,11 @@ The actual author of the section when it is not the author of the composition. I
           <xs:documentation xml:lang="en">Entered in Error</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="unknown">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Unknown</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="FHIRDeviceStatus">
@@ -30575,7 +30586,7 @@ The actual author of the section when it is not the author of the composition. I
               <xs:documentation xml:lang="en">Describes the relationship between the device and subject.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="status" minOccurs="1" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="status" minOccurs="1" maxOccurs="1" type="DeviceAssociationCodes">
             <xs:annotation>
               <xs:documentation xml:lang="en">Indicates the state of the Device association.</xs:documentation>
            </xs:annotation>
@@ -30583,6 +30594,11 @@ The actual author of the section when it is not the author of the composition. I
           <xs:element name="statusReason" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The reasons given for the current association status.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="associationStatus" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">State of the device’s association (e.g., implanted, attached, on, off, standby, defective).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="subject" minOccurs="0" maxOccurs="1" type="Reference">
@@ -30632,6 +30648,41 @@ The actual author of the section when it is not the author of the composition. I
            </xs:annotation>
           </xs:element>
         </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="DeviceAssociationCodesEnum">
+    <xs:restriction base="code-primitive">
+      <xs:enumeration value="active">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Active</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="inactive">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Inactive</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="entered-in-error">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Entered in Error</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unknown">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Unknown</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DeviceAssociationCodes">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">A coded concept specifying the state of the device association.</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="DeviceAssociationCodesEnum" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -30913,9 +30964,9 @@ The actual author of the section when it is not the author of the composition. I
               <xs:documentation xml:lang="en">The type of identifier itself.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="deviceIdentifier" minOccurs="1" maxOccurs="1" type="string">
+          <xs:element name="identifier" minOccurs="1" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The identifier itself.</xs:documentation>
+              <xs:documentation xml:lang="en">The identifier used in the associated regulatory context.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="issuer" minOccurs="1" maxOccurs="1" type="uri">
@@ -30925,12 +30976,12 @@ The actual author of the section when it is not the author of the composition. I
           </xs:element>
           <xs:element name="jurisdiction" minOccurs="1" maxOccurs="1" type="uri">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The jurisdiction to which the deviceIdentifier applies.</xs:documentation>
+              <xs:documentation xml:lang="en">The applicable jurisdiction overseeing the enforcement of the Identifier.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="deviceIdentifierSystem" minOccurs="0" maxOccurs="1" type="uri">
+          <xs:element name="identifierSystem" minOccurs="0" maxOccurs="1" type="uri">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Establishes the namespace for the issuing agency's system (e.g, GS1's GTIN, ICCBBA's ISBT-128) used to create the device identifier.</xs:documentation>
+              <xs:documentation xml:lang="en">Establishes the namespace for the issuing agency's system (e.g, GS1's GTIN, ICCBBA's ISBT-128) used to create the identifier.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -31941,7 +31992,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           </xs:element>
           <xs:element name="status" minOccurs="1" maxOccurs="1" type="DeviceUsageStatus">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A code representing the patient or other source's judgment about the state of the device used that this statement is about.  Generally this will be active or completed.</xs:documentation>
+              <xs:documentation xml:lang="en">The current state of the device usage.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="category" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
@@ -32007,9 +32058,9 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">Reason or justification for the use of the device. A coded concept, or another resource whose existence justifies this DeviceUsage.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="bodySite" minOccurs="0" maxOccurs="1" type="CodeableReference">
+          <xs:element name="bodyStructure" minOccurs="0" maxOccurs="1" type="CodeableReference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates the anotomic location on the subject's body where the device was used ( i.e. the target).</xs:documentation>
+              <xs:documentation xml:lang="en">Indicates the anatomic location on the subject's body where the device was used (i.e. the target).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
@@ -32431,7 +32482,7 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
               <xs:documentation xml:lang="en">Any other resource this document reference was created or to which the creation of this record is tightly associated.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="bodySite" minOccurs="0" maxOccurs="unbounded" type="CodeableReference">
+          <xs:element name="bodyStructure" minOccurs="0" maxOccurs="unbounded" type="CodeableReference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The anatomic structures included in the document.</xs:documentation>
            </xs:annotation>
@@ -35191,9 +35242,9 @@ See guidance around (not) making local changes to elements [here](canonicalresou
               <xs:documentation xml:lang="en">A code to indicate whether the nature of the request is: Claim - A request to an Insurer to adjudicate the supplied charges for health care goods and services under the identified policy and to pay the determined Benefit amount, if any; Preauthorization - A request to an Insurer to adjudicate the supplied proposed future charges for health care goods and services under the identified policy and to approve the services and provide the expected benefit amounts and potentially to reserve funds to pay the benefits when Claims for the indicated services are later submitted; or, Pre-determination - A request to an Insurer to adjudicate the supplied 'what if' charges for health care goods and services under the identified policy and report back what the Benefit payable would be had the services actually been provided.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="patient" minOccurs="1" maxOccurs="1" type="Reference">
+          <xs:element name="subject" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The party to whom the professional services and/or products have been supplied or are being considered and for whom actual for forecast reimbursement is sought.</xs:documentation>
+              <xs:documentation xml:lang="en">The party/group to whom the professional services and/or products have been supplied or are being considered and for whom actual for forecast reimbursement is sought.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="billablePeriod" minOccurs="0" maxOccurs="1" type="Period">
@@ -35419,7 +35470,7 @@ See guidance around (not) making local changes to elements [here](canonicalresou
         <xs:sequence>
           <xs:element name="claim" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Reference to a related claim.</xs:documentation>
+              <xs:documentation xml:lang="en">Reference to a related Claim or ExplanationOfBenefit as a representation of a claim.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="relationship" minOccurs="0" maxOccurs="1" type="CodeableConcept">
@@ -35495,11 +35546,6 @@ See guidance around (not) making local changes to elements [here](canonicalresou
           <xs:element name="provider" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Member of the team who provided the product or service.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="responsible" minOccurs="0" maxOccurs="1" type="boolean">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The party who is billing and/or responsible for the claimed products or services.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="role" minOccurs="0" maxOccurs="1" type="CodeableConcept">
@@ -35773,6 +35819,11 @@ See guidance around (not) making local changes to elements [here](canonicalresou
           <xs:element name="traceNumber" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
               <xs:documentation xml:lang="en">Trace number for tracking purposes. May be defined at the jurisdiction level or between trading partners.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="patient" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The party to whom the professional services and/or products have been supplied or are being considered and for whom actual for facast reimbursement is sought.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="revenue" minOccurs="0" maxOccurs="1" type="CodeableConcept">
@@ -36214,6 +36265,11 @@ See guidance around (not) making local changes to elements [here](canonicalresou
           <xs:element name="traceNumber" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
               <xs:documentation xml:lang="en">Trace number for tracking purposes. May be defined at the jurisdiction level or between trading partners.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="patient" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The party to whom the professional services and/or products have been supplied or are being considered and for whom actual for facast reimbursement is sought.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="informationSequence" minOccurs="0" maxOccurs="unbounded" type="positiveInt">
@@ -51198,6 +51254,11 @@ The primary difference between a medicationstatement and a medicationadministrat
               <xs:documentation xml:lang="en">A categorical assessment of an observation value.  For example, high, low, normal.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="interpretationContext" minOccurs="0" maxOccurs="unbounded" type="CodeableReference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Other preceding or concurrent information that is critical to understand the context and significance of the observation.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
             <xs:annotation>
               <xs:documentation xml:lang="en">Comments about the observation or the results.</xs:documentation>
@@ -51205,10 +51266,10 @@ The primary difference between a medicationstatement and a medicationadministrat
           </xs:element>
           <xs:element name="bodySite" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates the site on the subject's body where the observation was made (i.e. the target site).</xs:documentation>
+              <xs:documentation xml:lang="en">DEPRECATED: This element is deprecated. Use bodyStructure instead. Indicates the site on the subject's body where the observation was made (i.e. the target site).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="bodyStructure" minOccurs="0" maxOccurs="1" type="Reference">
+          <xs:element name="bodyStructure" minOccurs="0" maxOccurs="1" type="CodeableReference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Indicates the body structure on the subject's body where the observation was made (i.e. the target site).</xs:documentation>
            </xs:annotation>
@@ -51629,9 +51690,9 @@ Reflex | Repeat | Re-run.</xs:documentation>
               <xs:documentation xml:lang="en">Multiple results allowed for observations conforming to this ObservationDefinition.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="bodySite" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="bodyStructure" minOccurs="0" maxOccurs="1" type="CodeableReference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The site on the subject's body where the  observation is to be made.</xs:documentation>
+              <xs:documentation xml:lang="en">The body structure on the subject's body where the observation is to be made.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="method" minOccurs="0" maxOccurs="1" type="CodeableConcept">
@@ -54723,6 +54784,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
             <xs:element name="timingDuration" type="Duration"/>
             <xs:element name="timingRange" type="Range"/>
             <xs:element name="timingTiming" type="Timing"/>
+            <xs:element name="timingRelativeTime" type="RelativeTime"/>
           </xs:choice>
           <xs:element name="location" minOccurs="0" maxOccurs="1" type="CodeableReference">
             <xs:annotation>
@@ -54771,7 +54833,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:choice minOccurs="0" maxOccurs="1" >
             <xs:annotation>
-              <xs:documentation xml:lang="en">A reference to an ActivityDefinition that describes the action to be taken in detail, a MessageDefinition describing a message to be sent, a PlanDefinition that describes a series of actions to be taken, a Questionnaire that should be filled out, a SpecimenDefinition describing a specimen to be collected, or an ObservationDefinition that specifies what observation should be captured.</xs:documentation>
+              <xs:documentation xml:lang="en">A reference to an ActivityDefinition that describes the action to be taken in detail, a Measure defining a measure to be evaluated, a MessageDefinition describing a message to be sent, a PlanDefinition that describes a series of actions to be taken, a Questionnaire that should be filled out, a SpecimenDefinition describing a specimen to be collected, an ObservationDefinition that specifies what observation should be captured, or an OperationDefinition that specifies what operation should be invoked.</xs:documentation>
             </xs:annotation>
             <xs:element name="definitionCanonical" type="canonical"/>
             <xs:element name="definitionUri" type="uri"/>
@@ -57017,6 +57079,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
             <xs:element name="timingDuration" type="Duration"/>
             <xs:element name="timingRange" type="Range"/>
             <xs:element name="timingTiming" type="Timing"/>
+            <xs:element name="timingRelativeTime" type="RelativeTime"/>
           </xs:choice>
           <xs:element name="location" minOccurs="0" maxOccurs="1" type="CodeableReference">
             <xs:annotation>
@@ -57070,7 +57133,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:choice minOccurs="0" maxOccurs="1" >
             <xs:annotation>
-              <xs:documentation xml:lang="en">A reference to an ActivityDefinition that describes the action to be taken in detail, a PlanDefinition that describes a series of actions to be taken, a Questionnaire that should be filled out, a SpecimenDefinition describing a specimen to be collected, or an ObservationDefinition that specifies what observation should be captured.</xs:documentation>
+              <xs:documentation xml:lang="en">A reference to an ActivityDefinition that describes the action to be taken in detail, a Measure that specifies a measure to be evaluated, a MessageDefinition that specifies a message to be sent, a PlanDefinition that describes a series of actions to be taken, a Questionnaire that should be filled out, a SpecimenDefinition describing a specimen to be collected, an ObservationDefinition that specifies what observation should be captured, or an OperationDefinition that specifies what operation should be invoked.</xs:documentation>
             </xs:annotation>
             <xs:element name="definitionCanonical" type="canonical"/>
             <xs:element name="definitionUri" type="uri"/>
@@ -58941,10 +59004,10 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:element name="bodySite" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Anatomic location where the procedure should be performed. This is the target site.</xs:documentation>
+              <xs:documentation xml:lang="en">DEPRECATED: Use bodyStructure instead. Anatomic location where the procedure should be performed. This is the target site.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="bodyStructure" minOccurs="0" maxOccurs="1" type="Reference">
+          <xs:element name="bodyStructure" minOccurs="0" maxOccurs="1" type="CodeableReference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Anatomic location where the procedure should be performed. This is the target site.</xs:documentation>
            </xs:annotation>
